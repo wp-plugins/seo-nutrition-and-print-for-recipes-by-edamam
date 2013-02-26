@@ -1,6 +1,6 @@
-=== Edamam ===
+=== Recipe SEO and Nutrition by Edamam ===
 Contributors: Edamam LLC
-Plugin Name: Recipe SEO and Nutrition Plug-in
+Plugin Name: Recipe SEO and Nutrition by Edamam
 Plugin URI: http://www.edamam.com/widget/recipe/files/edamam-recipe.zip
 Tags: recipe plug-in, SEO, hRecipe, Schema.org, nutrition
 Author URI: http://www.edamam.com/
@@ -31,7 +31,7 @@ Save button.
 == Frequently Asked Questions ==
 
 
-= Does it the nutritional information work only on English language blogs=
+= Does it the nutritional information work only on English language blogs =
 Currently we support only nutritional information for blogs in English. Shoot us an e-mail at widget@edamam.com and we will keep you posted when we expand to support additional languages.
 
 = How do I format recipe with several ingredient lists =
@@ -53,9 +53,10 @@ You can email widget@edamam.com with your requests.
 
 == Changelog ==
 
-1.0 First iteration
-
-== Upgrade Notice ==
+Version 2.0
+Added:
+- Ability to remove Edamam logo
+- Option to format multiple ingredient lists in a single recipe
 
 
 == Features that will be added in upcoming versions of the Edamam Plugin ==
