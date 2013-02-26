@@ -7,8 +7,8 @@ Author URI: http://www.edamam.com/
 Author: Edamam LLC
 Requires at least: 3.2
 Tested up to: 3.3.1
-Stable tag: 1.0
-Version: 1.0
+Stable tag: 2.0
+Version: 2.0
 
 This is a complete SEO solution for your recipes which also has a feature which calculates nutrition for your recipes.
 
@@ -16,7 +16,7 @@ This is a complete SEO solution for your recipes which also has a feature which 
 <full description>
 You can quickly and easily format your recipe with built in SEO feature, print feature and automatic calorie and nutrition calculation for each recipe. 
 List the recipe summary under each recipe using the plug-in. This way you will keep your posts, offer easily readable recipe and at the same time make each your recipe search engine friendly.
-Not only you can chose between hRecipe and Schema.org micro-formats but the added nutritional information will make you recipe even more attractive for Google.
+We automatically add Schema.org micro-formats which togather with added nutritional information will make you recipe even more attractive for Google.
 
 == Installation ==
 1. Install the Edamam Plugin using the built-in WordPress plugin installer at Plugins/Add New/Upload. If you want to install it manually, just unzip it to"/wp-content/plugins/. Please make sure all files are located in "/wp-content/plugins/edamam-recipe/". 
