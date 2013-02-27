@@ -2,7 +2,7 @@
 Contributors: Edamam LLC
 Plugin Name: SEO, Nutrition and Print for Recipes by Edamam 
 Plugin URI: http://www.edamam.com/widget/recipe/files/edamam-recipe.zip
-Tags: recipe plug-in, SEO, hRecipe, Schema.org, nutrition
+Tags: SEO, recipes, recipe seo, calorie, calories, hRecipe, Schema.org, nutrition
 Author URI: http://www.edamam.com/
 Author: Edamam LLC
 Requires at least: 3.2
