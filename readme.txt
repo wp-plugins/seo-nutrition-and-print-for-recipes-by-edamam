@@ -55,11 +55,12 @@ You can email widget@edamam.com with your requests.
 
 
 == Screenshots ==
+
 1. /assets/1.png
 
 == Changelog ==
 
-Version 2.0
+= 2.0 =
 Added:
 - Ability to remove Edamam logo
 - Option to format multiple ingredient lists in a single recipe
