@@ -10,13 +10,17 @@ Tested up to: 3.3.1
 Stable tag: 2.0
 Version: 2.0
 
-This is a complete SEO solution for your recipes which also has a feature which calculates nutrition for your recipes.
+Make your recipes search engine friendly by automatically adding Schema.org tags and nutrition to them. In addition add great formating to the recipe summary in your posts and offer your customers printable recipe cards.
 
 == Description ==
 <full description>
 You can quickly and easily format your recipe with built in SEO feature, print feature and automatic calorie and nutrition calculation for each recipe. 
+
 List the recipe summary under each recipe using the plug-in. This way you will keep your posts, offer easily readable recipe and at the same time make each your recipe search engine friendly.
+
 We automatically add Schema.org micro-formats which togather with added nutritional information will make you recipe even more attractive for Google.
+
+See a quick demo on how you can format any recipe in 45 seconds - http://www.youtube.com/watch?v=ChgNi2mP3OA
 
 == Installation ==
 1. Install the Edamam Plugin using the built-in WordPress plugin installer at Plugins/Add New/Upload. If you want to install it manually, just unzip it to"/wp-content/plugins/. Please make sure all files are located in "/wp-content/plugins/edamam-recipe/". 
@@ -25,6 +29,8 @@ We automatically add Schema.org micro-formats which togather with added nutritio
 
 3. To use the plugin, click the little E'' icon on the "Edit Post" pages, right next to the other "Upload/Insert" links at the top of the text editor box. Then enter the details about your recipe into the appropriate boxes, and click the  
 Save button.
+
+4. See a short video on how to use the plugin to format any recipe in 45 seconds - http://www.youtube.com/watch?v=ChgNi2mP3OA
 
 
 
@@ -49,7 +55,7 @@ You can email widget@edamam.com with your requests.
 
 
 == Screenshots ==
-
+1. /assets/1.png
 
 == Changelog ==
 
