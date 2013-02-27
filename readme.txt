@@ -56,7 +56,7 @@ You can email widget@edamam.com with your requests.
 
 == Screenshots ==
 
-1. /assets/1.png
+1. /assets/screenshot-1.png
 
 
 == Changelog ==
