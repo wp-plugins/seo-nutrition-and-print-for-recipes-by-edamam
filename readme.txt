@@ -58,6 +58,7 @@ You can email widget@edamam.com with your requests.
 
 1. /assets/1.png
 
+
 == Changelog ==
 
 = 2.0 =
