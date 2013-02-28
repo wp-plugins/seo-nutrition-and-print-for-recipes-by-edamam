@@ -41,10 +41,10 @@ Save button.
 Currently we support only nutritional information for blogs in English. Shoot us an e-mail at widget@edamam.com and we will keep you posted when we expand to support additional languages.
 
 = How do I format recipe with several ingredient lists =
-Just paste each of the ingredient lists in the plugin using the DIV formating (it is in the plugin settings). We will then keep your formating and calculate the nutritional information for the entire recipe.
+Just paste all of the ingredient lists in the plugin using the DIV formating (it is in the plugin settings). We will then keep your formating and calculate the nutritional information for the entire recipe. There is instruction on how to format above the ingredients field
 
 = What can I do if I have several recipes on the same page = 
-Unfortunately the plugin will work correctly only for the first recipe from the page. Please use the plugin only for pages with one recipe on them.
+Yes you can you need to insert a separate plugin for each recipe with the correct title
 
 = Why do I get zero values for the nutrition when editing a recipe =
 Don't worry, the nutrition will start show correct values within a minute of you publishing the recipe.
@@ -56,7 +56,7 @@ You can email widget@edamam.com with your requests.
 
 == Screenshots ==
 
-1. The way the plug-in will look under your blogpost
+1. The way the plug-in will look under your blogpost (the logo can be removed)
 
 
 == Changelog ==
