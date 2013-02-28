@@ -10,7 +10,7 @@ Tested up to: 3.3.1
 Stable tag: 2.0
 Version: 2.0
 
-Make your recipes search engine friendly by automatically adding Schema.org tags and nutrition to them. In addition add great formating to the recipe summary in your posts and offer your customers printable recipe cards.
+Format any easily any recipe, and also make your recipes search engine friendly with Schema.org tags and by adding nutrition to them. 
 
 == Description ==
 <full description>
@@ -56,7 +56,7 @@ You can email widget@edamam.com with your requests.
 
 == Screenshots ==
 
-1. /assets/screenshot-1.png
+1. screenshot-1.png
 
 
 == Changelog ==
