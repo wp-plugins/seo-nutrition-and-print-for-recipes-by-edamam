@@ -56,7 +56,7 @@ You can email widget@edamam.com with your requests.
 
 == Screenshots ==
 
-1. screenshot-1.png
+1. The way the plug-in will look under your blogpost
 
 
 == Changelog ==
