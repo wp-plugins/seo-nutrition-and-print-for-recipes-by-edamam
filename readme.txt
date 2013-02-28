@@ -6,7 +6,7 @@ Tags: SEO, recipes, recipe seo, calorie, calories, hRecipe, Schema.org, nutritio
 Author URI: http://www.edamam.com/
 Author: Edamam LLC
 Requires at least: 3.2
-Tested up to: 3.3.1
+Tested up to: 3.5
 Stable tag: 2.0
 Version: 2.0
 
