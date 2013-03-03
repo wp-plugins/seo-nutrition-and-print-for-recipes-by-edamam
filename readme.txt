@@ -1,5 +1,5 @@
 === SEO, Nutrition and Print for Recipes by Edamam ===
-Contributors: Edamam LLC, Ziplist
+Contributors: Edamam LLC
 Plugin Name: SEO, Nutrition and Print for Recipes by Edamam 
 Plugin URI: http://www.edamam.com/widget/recipe/files/edamam-recipe.zip
 Tags: SEO, recipes, recipe seo, calorie, calories, hRecipe, Schema.org, nutrition
@@ -21,6 +21,7 @@ List the recipe summary under each recipe using the plug-in. This way you will k
 We automatically add Schema.org micro-formats which togather with added nutritional information will make you recipe even more attractive for Google.
 
 See a quick demo on how you can format any recipe in 45 seconds - http://www.youtube.com/watch?v=ChgNi2mP3OA
+
 
 == Installation ==
 1. Install the Edamam Plugin using the built-in WordPress plugin installer at Plugins/Add New/Upload. If you want to install it manually, just unzip it to"/wp-content/plugins/. Please make sure all files are located in "/wp-content/plugins/edamam-recipe/". 
@@ -52,6 +53,11 @@ Don't worry, the nutrition will start show correct values within a minute of you
 = How can I request a feature to be added in future versions of the Edamam Plugin? =
 
 You can email widget@edamam.com with your requests.
+
+= Is this a clone of the Ziplist Plugin = 
+This plugin is an extension to the Ziplist plugin with added:
+- Automated nutritional data calculation and including it in the Schema.org microtags
+- Allows formating of more then one ingredient list in the same recipe.
 
 
 == Screenshots ==
