@@ -63,6 +63,7 @@ This plugin is an extension to the Ziplist plugin with added:
 == Screenshots ==
 
 1. The way the plug-in will look under your blogpost (the logo can be removed)
+2. This is how your recipes will look in Google's search results
 
 
 == Changelog ==
