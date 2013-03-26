@@ -1056,6 +1056,14 @@ function edamam_recipe_process_head() {
   
   $recipe = $wpdb->get_row("SELECT * FROM " . $wpdb->prefix . "edamam_recipe_recipes WHERE post_id=" . $recipe_id);
   $yield = $recipe->serving_size;
+
+  $header_html = '
+  <meta property="og:title" content="'.$rtitle.'"/>
+  <meta property="og:type" content="food"/>
+  <meta property="og:url" content="'.$url.'"/>
+  <meta property="og:image" content="'.$recipe->recipe_image.'"/>
+  <meta property="og:site_name" content="Edamam.com"/>  
+  ';
        
   if($preview == "true"){
     $header_html .= '<script type="text/javascript" src="'.$recipe_url_source.'/source/plugin.js?preview=true"></script>';
@@ -1072,6 +1080,13 @@ function edamam_recipe_process_head() {
 
 }
 add_filter('wp_head', 'edamam_recipe_process_head');
+
+add_filter( 'post_class', 'fc_remove_hentry', 20 );
+function fc_remove_hentry( $classes ) {
+  if( ( $key = array_search( 'hentry', $classes ) ) !== false )
+  unset( $classes[$key] );
+  return $classes;
+}
 
 function force_Recipe() {
   global $edamam_url_api;

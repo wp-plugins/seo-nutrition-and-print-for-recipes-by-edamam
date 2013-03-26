@@ -7,8 +7,8 @@ Author URI: http://www.edamam.com/
 Author: Edamam LLC
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 2.0
-Version: 2.0
+Stable tag: 2.1
+Version: 2.1
 
 Format any easily any recipe, and also make your recipes search engine friendly with Schema.org tags and by adding nutrition to them. 
 
@@ -66,6 +66,9 @@ This plugin is an extension to the Ziplist plugin with added:
 
 
 == Changelog ==
+
+= 2.1 =
+Improved image tagging. Now Google always shows the image in the search results
 
 = 2.0 =
 Added:
