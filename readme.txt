@@ -7,8 +7,8 @@ Author URI: http://www.edamam.com/
 Author: Edamam LLC
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 2.1
-Version: 2.1
+Stable tag: 2.2
+Version: 2.2
 
 Format any easily any recipe, and also make your recipes search engine friendly with Schema.org tags and by adding nutrition to them. 
 
@@ -18,7 +18,9 @@ You can quickly and easily format your recipe with built in SEO feature, print f
 
 List the recipe summary under each recipe using the plug-in. This way you will keep your posts, offer easily readable recipe and at the same time make each your recipe search engine friendly.
 
-We automatically add Schema.org micro-formats which togather with added nutritional information will make you recipe even more attractive for Google.
+We automatically add Schema.org micro-formats which together with added nutritional information will make you recipe even more attractive for Google.
+
+Any recipe formatted with the plugin will be immediately distributed and searchable on www.Edamam.com and on Edamam's mobile recipe search apps for Android and iOS. 
 
 See a quick demo on how you can format any recipe in 45 seconds - http://www.youtube.com/watch?v=ChgNi2mP3OA
 
@@ -56,7 +58,7 @@ You can email widget@edamam.com with your requests.
 
 = Is this a clone of the Ziplist Plugin = 
 This plugin is an extension to the Ziplist plugin with added:
-- Automated nutritional data calculation and including it in the Schema.org microtags
+- Automated nutritional data calculation and including it in the Schema.org micro tags
 - Allows formating of more then one ingredient list in the same recipe.
 
 
@@ -67,6 +69,10 @@ This plugin is an extension to the Ziplist plugin with added:
 
 
 == Changelog ==
+
+= 2.2 =
+All recipes formatted with Edamam and including an image in the plugin are now searchable on Edamam.com and on Edamam's mobile apps.
+Various bug fixes.
 
 = 2.1 =
 Improved image tagging. Now Google always shows the image in the search results

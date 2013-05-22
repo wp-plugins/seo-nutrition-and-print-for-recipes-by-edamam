@@ -3,7 +3,7 @@
 Plugin Name: Recipe SEO and Nutrition Plugin
 Plugin URI: http://www.edamam.com/widget
 Description: Include calorie and nutritional information in your recipes automatically and completely free.
-Version: 2.1
+Version: 2.2
 Author: Edamam LLC
 Author URI: http://www.edamam.com/
 License: GPLv3 or later
@@ -103,9 +103,10 @@ $recipe_db_version = "3.1";	// This must be changed when the DB structure is mod
 //   1.0        3.1
 //   2.0        3.1
 //   2.1        3.1
+//   2.2        3.1
 
 global $recipe_url_source;
-$recipe_url_source = "http://www.edamam.com/widget/recipe";
+$recipe_url_source = "http://www.edamam.com/widget/recipe"; 
 
 global $edamam_url_api;
 $edamam_url_api = "http://www.edamam.com/api/nutrient-info";
@@ -1076,7 +1077,7 @@ function edamam_recipe_process_head() {
   $header_html .= '<style type="text/css">#recipe-container{background: '.$background.';}</style>';
   $header_html .= '<script type="text/javascript" src="' . EDAMAM_RECIPE_PLUGIN_DIRECTORY . 'print.js"></script>'; 
   if (is_single() == true){
- 	  echo $header_html;    
+ 	  echo $header_html; 
   }
 
 }
@@ -1090,27 +1091,38 @@ function fc_remove_hentry( $classes ) {
 }
 
 function force_Recipe() {
-  global $edamam_url_api;
-  $partner_key = get_option('edamam_partner_key');
+  global $edamam_url_api; 
+  global $edamam_url_source;
+  global $wpdb;
+
   $url = get_permalink();
+  $recipe_id = get_the_ID();
+  $partner_key = get_option('edamam_partner_key');
+  
+  $recipe = $wpdb->get_row("SELECT * FROM " . $wpdb->prefix . "edamam_recipe_recipes WHERE post_id=" . $recipe_id);
+  
+  $ingredients = preg_split("/\r\n|\n|\r/", $recipe->ingredients);   
+  $ingredients = '"'.implode('","', $ingredients).'"';
 
-  $params = array('http' => array(
-                 'method' => 'GET'
-            ));
-  if ($optional_headers !== null) {
-     $params['http']['header'] = $optional_headers;
-  }
-  $ctx = stream_context_create($params);
-  $fp = @fopen($edamam_url_api."?callback=loaded&widgetKey=".$partner_key."&url=".urlencode($url)."&force=", 'rb', false, $ctx);
-  if (!$fp) {
-     //throw new Exception("Problem with $url, $php_errormsg");
-  }
-  $response = @stream_get_contents($fp);
-  if ($response === false) {
-     //throw new Exception("Problem reading data from $url, $php_errormsg");
-  }
-  return $response;
+  $data_string = '{
+      "title":"'.$recipe->recipe_title.'", 
+      "yield":"'.$recipe->serving_size.'", 
+      "img":"'.$recipe->recipe_image.'" ,
+      "ingr":['.$ingredients.']
+  }';  
 
+  $ch = curl_init($edamam_url_api.'?widgetKey='.$partner_key.'&url='.$url);                                                                      
+  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
+      'Content-Type: application/json',                                                                                
+      'Content-Length: ' . strlen($data_string))                                                                       
+  );                                                                                                                   
+   
+  $result = curl_exec($ch); 
+  return $result;
+ 
 }
 
 add_action('publish_post', 'force_Recipe');
