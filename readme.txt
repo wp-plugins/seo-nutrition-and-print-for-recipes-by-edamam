@@ -12,6 +12,8 @@ Version: 2.2
 
 Format any easily any recipe, and also make your recipes search engine friendly with Schema.org tags and by adding nutrition to them. 
 
+Every formatted recipe will be immediateltly searchable on Edamam.com and all Edamam's mobile apps.
+
 == Description ==
 <full description>
 You can quickly and easily format your recipe with built in SEO feature, print feature and automatic calorie and nutrition calculation for each recipe. 
