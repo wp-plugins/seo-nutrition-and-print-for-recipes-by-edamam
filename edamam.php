@@ -3,7 +3,7 @@
 Plugin Name: Recipe SEO and Nutrition Plugin
 Plugin URI: http://www.edamam.com/widget
 Description: Include calorie and nutritional information in your recipes automatically and completely free.
-Version: 2.2
+Version: 2.3
 Author: Edamam LLC
 Author URI: http://www.edamam.com/
 License: GPLv3 or later
@@ -92,7 +92,7 @@ if (strpos($_SERVER['REQUEST_URI'], 'media-upload.php') && strpos($_SERVER['REQU
 }
 
 global $recipe_db_version;
-$recipe_db_version = "3.1";	// This must be changed when the DB structure is modified
+$recipe_db_version = "3.2";	// This must be changed when the DB structure is modified
 
 // Creates Edamam tables in the db if they don't exist already.
 // Don't do any data initialization in this routine as it is called on both install as well as
@@ -104,9 +104,7 @@ $recipe_db_version = "3.1";	// This must be changed when the DB structure is mod
 //   2.0        3.1
 //   2.1        3.1
 //   2.2        3.1
-
-global $recipe_url_source;
-$recipe_url_source = "http://www.edamam.com/widget/recipe"; 
+//   2.3        3.2
 
 global $edamam_url_api;
 $edamam_url_api = "http://www.edamam.com/api/nutrient-info";
@@ -170,7 +168,18 @@ function edamam_recipe_install() {
             ingredients TEXT,
             instructions TEXT,
             notes TEXT,
-            created_at TIMESTAMP DEFAULT NOW()
+            created_at TIMESTAMP DEFAULT NOW(),
+            servings VARCHAR(50),
+            calories VARCHAR(50),
+            fatlabel VARCHAR(50),
+            fatquantity VARCHAR(50),
+            fatunit VARCHAR(50),
+            carbslabel VARCHAR(50),
+            carbsquantity VARCHAR(50),
+            carbsunit VARCHAR(50),
+            proteinlabel VARCHAR(50),
+            proteinquantity VARCHAR(50),
+            proteinunit VARCHAR(50)
         	);";
 
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
@@ -683,7 +692,13 @@ function edamam_recipe_iframe_content($post_info = null, $get_info = null) {
     <link rel="stylesheet" href="$url/wp-content/plugins/$dir_name/edamam.css" type="text/css" media="all" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script type="text/javascript">//<!CDATA[
-                                        
+        
+        function isNumberKey(evt){
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }                                            
         
         function edamamEDRecipeSubmitForm() {
             var title = document.forms['recipe_form']['recipe_title'].value;
@@ -728,7 +743,14 @@ function edamam_recipe_iframe_content($post_info = null, $get_info = null) {
             <input type='hidden' name='recipe_id' value='$recipe_id' />
             <p id='recipe-title'><label>Recipe Title <span class='required'>*</span></label> <input type='text' name='recipe_title' value='$recipe_title' /></p>
             <p id='recipe-image'><label>Recipe Image</label> <input type='text' name='recipe_image' value='$recipe_image' /></p>
-            <p><label>Serving Size</label> <input type='text' name='serving_size' value='$serving_size' /></p>
+            <p><label>Serving Size</label> <input type='number' onkeypress='return isNumberKey(event)' name='serving_size' value='$serving_size' /></p>
+            <p class="cls"><label>Total Time</label>
+              $total_time_input
+              <span class="time">
+                 <span><input type='number' min="0" max="24" name='total_time_hours' onkeypress='return isNumberKey(event)' value='$total_time_hours' /><label>hours</label></span>
+                 <span><input type='number' min="0" max="60" name='total_time_minutes' onkeypress='return isNumberKey(event)' value='$total_time_minutes' /><label>minutes</label></span>
+              </span>
+            </p>
             <p id='edamam_recipe_ingredients' class='cls'><label>Ingredients <span class='required'>*</span> <small>Put each ingredient on a separate line.  There is no need to use bullets for your ingredients. To add sub-headings put them on a new line between [...]. Example will be - [for the dressing:]</small></label><textarea name='ingredients'>$ingredients</textarea></label></p>
             <p id='edamam-recipe-instructions' class='cls'><label>Instructions <small>Press return after each instruction. There is no need to number your instructions.</small></label><textarea name='instructions'>$instructions</textarea></label></p>
             <p><a href='#' id='more-options-toggle'>More options</a></p>
@@ -749,22 +771,15 @@ function edamam_recipe_iframe_content($post_info = null, $get_info = null) {
                 <p class="cls"><label>Prep Time</label> 
                     $prep_time_input
                     <span class="time">
-                        <span><input type='number' min="0" max="24" name='prep_time_hours' value='$prep_time_hours' /><label>hours</label></span>
-                        <span><input type='number' min="0" max="60" name='prep_time_minutes' value='$prep_time_minutes' /><label>minutes</label></span>
+                        <span><input type='number' min="0" max="24" onkeypress='return isNumberKey(event)' name='prep_time_hours' value='$prep_time_hours' /><label>hours</label></span>
+                        <span><input type='number' min="0" max="60" onkeypress='return isNumberKey(event)' name='prep_time_minutes' value='$prep_time_minutes' /><label>minutes</label></span>
                     </span>
                 </p>
                 <p class="cls"><label>Cook Time</label>
                     $cook_time_input
                     <span class="time">
-                    	<span><input type='number' min="0" max="24" name='cook_time_hours' value='$cook_time_hours' /><label>hours</label></span>
-                        <span><input type='number' min="0" max="60" name='cook_time_minutes' value='$cook_time_minutes' /><label>minutes</label></span>
-                    </span>
-                </p>
-                <p class="cls"><label>Total Time</label>
-                    $total_time_input
-                    <span class="time">
-                        <span><input type='number' min="0" max="24" name='total_time_hours' value='$total_time_hours' /><label>hours</label></span>
-                        <span><input type='number' min="0" max="60" name='total_time_minutes' value='$total_time_minutes' /><label>minutes</label></span>
+                    	<span><input type='number' min="0" max="24" onkeypress='return isNumberKey(event)' name='cook_time_hours' value='$cook_time_hours' /><label>hours</label></span>
+                        <span><input type='number' min="0" max="60" onkeypress='return isNumberKey(event)' name='cook_time_minutes' value='$cook_time_minutes' /><label>minutes</label></span>
                     </span>
                 </p>
                 <p class='cls'><label>Notes</label> <textarea name='notes'>$notes</textarea></label></p>
@@ -1043,7 +1058,6 @@ function edamam_recipe_format_duration($duration) {
 }
 // function to include the javascript for the Add Recipe button
 function edamam_recipe_process_head() {
-  global $recipe_url_source;
   global $wpdb;
       
   $header_html = '';
@@ -1066,16 +1080,10 @@ function edamam_recipe_process_head() {
   <meta property="og:image" content="'.$recipe->recipe_image.'"/>
   <meta property="og:site_name" content="Edamam.com"/>  
   ';
-       
-  if($preview == "true"){
-    $header_html .= '<script type="text/javascript" src="'.$recipe_url_source.'/source/plugin.js?preview=true"></script>';
-  } else {
-    $header_html .= '<script type="text/javascript" src="'.$recipe_url_source.'/source/plugin.js?key='.$partner_key.'&url='.urlencode($url).'&rtitle='.$rtitle.'&y='.$yield.'&logo='.$logo.'"></script>';
-  }
 
-  $header_html .= '<link type="text/css" rel="stylesheet" href="'.$recipe_url_source.'/source/style.css"/>';
+  $header_html .= '<link type="text/css" rel="stylesheet" href="'.EDAMAM_RECIPE_PLUGIN_DIRECTORY.'style.css"/>';
   $header_html .= '<style type="text/css">#recipe-container{background: '.$background.';}</style>';
-  $header_html .= '<script type="text/javascript" src="' . EDAMAM_RECIPE_PLUGIN_DIRECTORY . 'print.js"></script>'; 
+  $header_html .= '<script type="text/javascript" src="'.EDAMAM_RECIPE_PLUGIN_DIRECTORY.'print.js"></script>'; 
   if (is_single() == true){
  	  echo $header_html; 
   }
@@ -1120,9 +1128,46 @@ function force_Recipe() {
       'Content-Length: ' . strlen($data_string))                                                                       
   );                                                                                                                   
    
-  $result = curl_exec($ch); 
-  return $result;
+  $result = curl_exec($ch);
+  
+  $parsed_json = json_decode($result, true); 
+  
+  $Servings = $parsed_json["yield"];
+  
+  $Calories = round($parsed_json["calories"]);
+  $Calories = round($Calories/$Servings);
+
+  $FatLabel = $parsed_json["totalNutrients"]["FAT"]["label"];  
+  $FatQuantity = round($parsed_json["totalNutrients"]["FAT"]["quantity"]);
+  $FatQuantity = round($FatQuantity/$Servings);
+  $FatUnit = $parsed_json["totalNutrients"]["FAT"]["unit"];   
+  
+  $CarbsLabel = $parsed_json["totalNutrients"]["CHOCDF"]["label"];  
+  $CarbsQuantity = round($parsed_json["totalNutrients"]["CHOCDF"]["quantity"]);
+  $CarbsQuantity = round($CarbsQuantity/$Servings);
+  $CarbsUnit = $parsed_json["totalNutrients"]["CHOCDF"]["unit"];  
+  
+  $ProteinLabel = $parsed_json["totalNutrients"]["PROCNT"]["label"];  
+  $ProteinQuantity = round($parsed_json["totalNutrients"]["PROCNT"]["quantity"]);
+  $ProteinQuantity = round($ProteinQuantity/$Servings);
+  $ProteinUnit = $parsed_json["totalNutrients"]["PROCNT"]["unit"];    
+
+  $RecipeData = array (
+        "servings" => $Servings,
+        "calories" => $Calories,
+        "fatlabel" => $FatLabel,
+        "fatquantity" => $FatQuantity,
+        "fatunit" => $FatUnit,
+        "carbslabel" => $CarbsLabel,
+        "carbsquantity" => $CarbsQuantity,
+        "carbsunit" => $CarbsUnit,
+        "proteinlabel" => $ProteinLabel,
+        "proteinquantity" => $ProteinQuantity,
+        "proteinunit" => $ProteinUnit,
+  );
  
+  $wpdb->update( $wpdb->prefix . "edamam_recipe_recipes", $RecipeData, array( 'post_id' => $recipe_id ));
+  
 }
 
 add_action('publish_post', 'force_Recipe');
@@ -1175,6 +1220,7 @@ function edamam_recipe_format_item($item, $elem, $class, $itemprop, $id, $i) {
 // Formats the recipe for output
 //!!mwp function edamam_recipe_format_recipe($recipe, $ingredients) {
 function edamam_recipe_format_recipe($recipe) { //!!mwp
+  global $wpdb;
     $output = "";
     $permalink = get_permalink();
 
@@ -1252,14 +1298,14 @@ function edamam_recipe_format_recipe($recipe) { //!!mwp
             }
           
             if ($recipe->serving_size != null) {
-                $output .= '<div id="recipe-nutrition" itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">';
+                $output .= '<div id="recipe-nutrition">';
             // serving 
                 if ($recipe->serving_size != null) {
                     $output .= '<p id="recipe-serving-size">';
                     if (strcmp(get_option('recipe_serving_size_label_hide'), 'Hide') != 0) {
                         $output .= get_option('recipe_serving_size_label') . ' ';
                     }
-                    $output .= '<span itemprop="servingSize">' . $recipe->serving_size . '</span></p>';
+                    $output .= '<span>' . $recipe->serving_size . '</span></p>';
                 }
 
                 $output .= '</div>';
@@ -1268,21 +1314,80 @@ function edamam_recipe_format_recipe($recipe) { //!!mwp
             //!! close the second container
           $output .= '
           </div>';
+        
+        $url = get_permalink();
+        $recipe_id = get_the_ID();
+
+        $record = $wpdb->get_row("SELECT servings FROM " . $wpdb->prefix . "edamam_recipe_recipes WHERE post_id=" . $recipe_id);
+        
+        if($record->servings == ""){
+          force_Recipe();
+        }
+         
+        $recipe = $wpdb->get_row("SELECT * FROM " . $wpdb->prefix . "edamam_recipe_recipes WHERE post_id=" . $recipe_id);
+
+        $calories = $recipe->calories;
+      
+        $fatlabel = $recipe->fatlabel;  
+        $fatquantity = $recipe->fatquantity;
+        $fatunit = $recipe->fatunit;   
+        
+        $carbslabel = $recipe->carbslabel;  
+        $carbsquantity = $recipe->carbsquantity;
+        $carbsunit = $recipe->carbsunit;  
+        
+        $proteinlabel = $recipe->proteinlabel;  
+        $proteinquantity = $recipe->proteinquantity;
+        $proteinunit = $recipe->proteinunit;  
+        
+        $logo = get_option('recipe_logo');
           
+        if($logo == "yes"){
+          $logostr = '<span style="float:right;"><a target="_blank" href="http://www.edamam.com"><img src="' . EDAMAM_RECIPE_PLUGIN_DIRECTORY . 'edamam-logo-plugin.png" class="edamam-img"></a></span>';
+        } 
+        
+        $urlAddr = 'http://www.edamam.com/widget/nutrition.jsp?widgetKey='.$edamam_partner_key.'&url='.$url.'&rtitle='.$recipe->recipe_title.'&y='.$recipe->serving_size;
+         
         $edamamAPI = get_option('recipe_nutritional_info');
         if (strcmp($edamamAPI, '') != 0) {
           $output .= '  
           <div id="edamam-nutritional-block">
-
+          
+            <div id="edamam-nutritional" itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation">
+              <p id="edamam-line">
+                <span class="name">Per Serving</span>
+                <span class="gr big"><span itemprop="calories">'.$calories.'</span> calories</span>
+              </p>
+              <p id="edamam-line">
+                <span class="name">'.$fatlabel.'</span>
+                <span class="gr"><span itemprop="fatContent">'.$fatquantity.'</span> '.$fatunit.'</span>
+              </p>
+              <p id="edamam-line">
+                <span class="name">'.$carbslabel.'</span>
+                <span class="gr"><span itemprop="carbohydrateContent">'.$carbsquantity.'</span> '.$carbsunit.'</span>
+              </p>
+              <p id="edamam-line">
+                <span class="name">'.$proteinlabel.'</span>
+                <span class="gr"><span itemprop="proteinContent">'.$proteinquantity.'</span> '.$proteinunit.'</span>
+              </p>
+              <span itemprop="servingSize" style="display:none;">' . $recipe->servings . '</span>
+            </div>
+            <div id="edamam-nutritional">
+              <p id="edamam-line">
+                <span style="float:left;"><a class="edamam-full" target="_blank" href="'.$urlAddr.'">See full nutrition!</a></span>'.$logostr.'<br/>
+              </p>
+            </div>
+            
           </div>';        		
         } else {
           $output .= '
           <div id="edamam-not-nutritional">
-            See Detailed Nutrition Info on<br/><a target="_blank" href="http://www.edamam.com"><img src="'.$recipe_url_source.'/source/logo-plugin-big.png" class="edamam-img"></a>
+            See Detailed Nutrition Info on<br/><a target="_blank" href="'.$urlAddr.'"><img src="' . EDAMAM_RECIPE_PLUGIN_DIRECTORY . 'logo-plugin-big.png" class="edamam-img"></a>
           </div>';
         }
      
-        $output .= '            
+        $output .= '
+        <img src="http://www.edamam.com/images/media/mentions/1x1.png" style="display:none;">            
         </div>';
 
         // create image and summary container
