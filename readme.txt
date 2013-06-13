@@ -1,0 +1,96 @@
+=== SEO, Nutrition and Print for Recipes by Edamam ===
+Contributors: Edamam LLC
+Plugin Name: SEO, Nutrition and Print for Recipes by Edamam 
+Plugin URI: http://www.edamam.com/widget/recipe/files/edamam-recipe.zip
+Tags: SEO, recipes, recipe seo, calorie, calories, hRecipe, Schema.org, nutrition
+Author URI: http://www.edamam.com/
+Author: Edamam LLC
+Requires at least: 3.2
+Tested up to: 3.5
+Stable tag: 2.3
+Version: 2.3
+
+Format any easily any recipe, and also make your recipes search engine friendly with Schema.org tags and by adding nutrition to them. 
+
+Every formatted recipe will be immediateltly searchable on Edamam.com and all Edamam's mobile apps.
+
+== Description ==
+<full description>
+You can quickly and easily format your recipe with built in SEO feature, print feature and automatic calorie and nutrition calculation for each recipe. 
+
+List the recipe summary under each recipe using the plug-in. This way you will keep your posts, offer easily readable recipe and at the same time make each your recipe search engine friendly.
+
+We automatically add Schema.org micro-formats which together with added nutritional information will make you recipe even more attractive for Google.
+
+Any recipe formatted with the plugin will be immediately distributed and searchable on www.Edamam.com and on Edamam's mobile recipe search apps for Android and iOS. 
+
+See a quick demo on how you can format any recipe in 45 seconds - http://www.youtube.com/watch?v=ChgNi2mP3OA
+
+
+== Installation ==
+1. Install the Edamam Plugin using the built-in WordPress plugin installer at Plugins/Add New/Upload. If you want to install it manually, just unzip it to"/wp-content/plugins/. Please make sure all files are located in "/wp-content/plugins/edamam-recipe/". 
+
+2. Click the activate link during installation. Or In your WordPress admin, click on "Plugins" and Activate the Edmam plugin.the files there or simply extract the zip file in the Plugins directory. 
+
+3. To use the plugin, click the little E'' icon on the "Edit Post" pages, right next to the other "Upload/Insert" links at the top of the text editor box. Then enter the details about your recipe into the appropriate boxes, and click the  
+Save button.
+
+4. See a short video on how to use the plugin to format any recipe in 45 seconds - http://www.youtube.com/watch?v=ChgNi2mP3OA
+
+
+
+== Frequently Asked Questions ==
+
+
+= Does it the nutritional information work only on English language blogs =
+Currently we support only nutritional information for blogs in English. Shoot us an e-mail at widget@edamam.com and we will keep you posted when we expand to support additional languages.
+
+= How do I format recipe with several ingredient lists =
+Just paste all of the ingredient lists in the plugin using the DIV formating (it is in the plugin settings). We will then keep your formating and calculate the nutritional information for the entire recipe. There is instruction on how to format above the ingredients field
+
+= What can I do if I have several recipes on the same page = 
+Yes you can you need to insert a separate plugin for each recipe with the correct title
+
+= Why do I get zero values for the nutrition when editing a recipe =
+Don't worry, the nutrition will start show correct values within a minute of you publishing the recipe.
+
+= How can I request a feature to be added in future versions of the Edamam Plugin? =
+
+You can email widget@edamam.com with your requests.
+
+= Is this a clone of the Ziplist Plugin = 
+This plugin is an extension to the Ziplist plugin with added:
+- Automated nutritional data calculation and including it in the Schema.org micro tags
+- Allows formating of more then one ingredient list in the same recipe.
+
+
+== Screenshots ==
+
+1. This is how your recipes will look in Google's search results 
+2. The way the plug-in will look under your blogpost (the logo can be removed)
+
+
+== Changelog ==
+
+= 2.3 =
+Nutritional information is now contained on the blog improving speed and reliability
+Improved Schema.org tagging with included nutrition in the tags
+Preview now shows nutritional information
+Improved formatting for narrow center column blogs
+Various bug fixes.
+
+= 2.2 =
+All recipes formatted with Edamam and including an image in the plugin are now searchable on Edamam.com and on Edamam's mobile apps.
+Various bug fixes.
+
+= 2.1 =
+Improved image tagging. Now Google always shows the image in the search results
+
+= 2.0 =
+Added:
+- Ability to remove Edamam logo
+- Option to format multiple ingredient lists in a single recipe
+
+
+== Features that will be added in upcoming versions of the Edamam Plugin ==
+* Have a suggestion for a feature we should add? [Drop us a line](mailto:widget@edamam.com)
