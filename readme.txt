@@ -72,7 +72,7 @@ This plugin is an extension to the Ziplist plugin with added:
 
 == Changelog ==
 
-= 2.2 =
+= 2.3 =
 Nutritional information is now contained on the blog improving speed and reliability
 Improved Schema.org tagging with included nutrition in the tags
 Preview now shows nutritional information
