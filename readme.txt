@@ -46,7 +46,7 @@ Save button.
 Currently we support only nutritional information for blogs in English. Shoot us an e-mail at widget@edamam.com and we will keep you posted when we expand to support additional languages.
 
 = How do I format recipe with several ingredient lists =
-Just paste all of the ingredient lists in the plugin using the DIV formating (it is in the plugin settings). We will then keep your formating and calculate the nutritional information for the entire recipe. There is instruction on how to format above the ingredients field
+Put each ingredient on a separate line. There is no need to use bullets for your ingredients. To add sub-headings put them on a new line between [...]. Example will be - [for the dressing:]
 
 = What can I do if I have several recipes on the same page = 
 Yes you can you need to insert a separate plugin for each recipe with the correct title
