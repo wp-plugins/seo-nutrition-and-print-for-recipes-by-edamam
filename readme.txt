@@ -77,7 +77,7 @@ Nutritional information is now contained on the blog improving speed and reliabi
 Improved Schema.org tagging with included nutrition in the tags
 Preview now shows nutritional information
 Improved formatting for narrow center column blogs
-Various bug fixes.
+Minor bug fixes.
 
 = 2.2 =
 All recipes formatted with Edamam and including an image in the plugin are now searchable on Edamam.com and on Edamam's mobile apps.
