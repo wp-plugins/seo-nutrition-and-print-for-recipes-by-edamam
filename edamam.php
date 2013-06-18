@@ -3,7 +3,7 @@
 Plugin Name: Recipe SEO and Nutrition Plugin
 Plugin URI: http://www.edamam.com/widget
 Description: Include calorie and nutritional information in your recipes automatically and completely free.
-Version: 2.3
+Version: 2.4
 Author: Edamam LLC
 Author URI: http://www.edamam.com/
 License: GPLv3 or later
@@ -105,6 +105,7 @@ $recipe_db_version = "3.2";	// This must be changed when the DB structure is mod
 //   2.1        3.1
 //   2.2        3.1
 //   2.3        3.2
+//   2.4        3.2
 
 global $edamam_url_api;
 $edamam_url_api = "http://www.edamam.com/api/nutrient-info";
@@ -1317,7 +1318,8 @@ function edamam_recipe_format_recipe($recipe) { //!!mwp
         
         $url = get_permalink();
         $recipe_id = get_the_ID();
-
+        $edamam_partner_key = get_option('edamam_partner_key');
+        
         $record = $wpdb->get_row("SELECT servings FROM " . $wpdb->prefix . "edamam_recipe_recipes WHERE post_id=" . $recipe_id);
         
         if($record->servings == ""){

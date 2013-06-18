@@ -7,8 +7,8 @@ Author URI: http://www.edamam.com/
 Author: Edamam LLC
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 2.3
-Version: 2.3
+Stable tag: 2.4
+Version: 2.4
 
 Format any easily any recipe, and also make your recipes search engine friendly with Schema.org tags and by adding nutrition to them. 
 
@@ -71,13 +71,15 @@ This plugin is an extension to the Ziplist plugin with added:
 
 
 == Changelog ==
+= 2.4 =
+Bug fix for the link to detailed nutritional informatio. 
 
 = 2.3 =
 Nutritional information is now contained on the blog improving speed and reliability
 Improved Schema.org tagging with included nutrition in the tags
 Preview now shows nutritional information
 Improved formatting for narrow center column blogs
-Minor bug fixes.
+Various bug fixes.
 
 = 2.2 =
 All recipes formatted with Edamam and including an image in the plugin are now searchable on Edamam.com and on Edamam's mobile apps.
