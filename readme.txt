@@ -10,12 +10,13 @@ Tested up to: 3.5
 Stable tag: 2.4
 Version: 2.4
 
-Format any easily any recipe, and also make your recipes search engine friendly with Schema.org tags and by adding nutrition to them. 
+The Edamam recipe plugin makes recipe formating easy and automatically makes the recipe search engine friendly with Schema.org tags and calculated nutrition. 
 
-Every formatted recipe will be immediateltly searchable on Edamam.com and all Edamam's mobile apps.
 
 == Description ==
 <full description>
+This is the recipe plugin which makes it easiest for you to format your recipe and make it Google friendly.
+
 You can quickly and easily format your recipe with built in SEO feature, print feature and automatic calorie and nutrition calculation for each recipe. 
 
 List the recipe summary under each recipe using the plug-in. This way you will keep your posts, offer easily readable recipe and at the same time make each your recipe search engine friendly.
