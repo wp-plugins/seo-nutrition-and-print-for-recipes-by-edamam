@@ -10,8 +10,7 @@ Tested up to: 3.5
 Stable tag: 2.4
 Version: 2.4
 
-The Edamam recipe plugin makes recipe formating easy and automatically makes the recipe search engine friendly with Schema.org tags and calculated nutrition. 
-
+The recipe plugin does all formating for you and makes your recipes Google and SEO friendly Schema.org. It also calculates recipe's nutrition!
 
 == Description ==
 <full description>
