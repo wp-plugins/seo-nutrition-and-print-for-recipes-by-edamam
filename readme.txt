@@ -97,26 +97,20 @@ Added:
 == Upgrade Notice ==
 
 = 2.4 =
-Upgrade immediately major update of formating and saving of the recipe nutritional content.
+Upgrade immediately major update of formating and saving of the recipe nutrition.
 
 = 2.3 =
-Nutritional information is now contained on the blog improving speed and reliability
-Improved Schema.org tagging with included nutrition in the tags
-Preview now shows nutritional information
-Improved formatting for narrow center column blogs
-Various bug fixes.
+
+Improved formatting for narrow center column blogs. Various bug fixes.
 
 = 2.2 =
-All recipes formatted with Edamam and including an image in the plugin are now searchable on Edamam.com and on Edamam's mobile apps.
-Various bug fixes.
+Recipes are now searchable on Edamam.com and the Edamam mobile apps.
 
 = 2.1 =
-Improved image tagging. Now Google always shows the image in the search results
+Improved image tagging. Now Google always shows the image in search results
 
 = 2.0 =
-Added:
-- Ability to remove Edamam logo
-- Option to format multiple ingredient lists in a single recipe
+Added ability to remove Edamam logo and format multi-step ingredient lists
 
 
 
