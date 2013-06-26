@@ -10,7 +10,7 @@ Tested up to: 3.5
 Stable tag: 2.4
 Version: 2.4
 
-The recipe plugin does all formating for you and makes your recipes Google and SEO friendly Schema.org. It also adds recipe's nutrition!
+The recipe plugin does all formating for you and makes recipes Google friendly with Schema.org. It also adds recipe's nutrition!
 
 == Description ==
 <full description>
