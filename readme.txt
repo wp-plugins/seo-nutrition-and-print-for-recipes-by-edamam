@@ -7,8 +7,8 @@ Author URI: http://www.edamam.com/
 Author: Edamam LLC
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 2.4
-Version: 2.4
+Stable tag: 2.5
+Version: 2.5
 License: GPLv2 or later
 
 The recipe plugin does all formating for you and makes recipes Google friendly with Schema.org. It also adds recipe's nutrition!
@@ -72,8 +72,12 @@ This plugin is an extension to the Ziplist plugin with added:
 
 
 == Changelog ==
+
 = 2.4 =
-Bug fix for the link to detailed nutritional informatio. 
+Updated registration process for the plugin. 
+
+= 2.4 =
+Bug fix for the link to detailed nutritional information. 
 
 = 2.3 =
 Nutritional information is now contained on the blog improving speed and reliability
@@ -95,6 +99,9 @@ Added:
 - Option to format multiple ingredient lists in a single recipe
 
 == Upgrade Notice ==
+
+= 2.4 =
+Changes applicable onl for new installs or unsuccessfull old installs. 
 
 = 2.4 =
 Upgrade immediately major update of formating and saving of the recipe nutrition.
