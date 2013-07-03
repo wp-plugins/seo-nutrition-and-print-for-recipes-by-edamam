@@ -25,7 +25,8 @@ We automatically add Schema.org micro-formats which together with added nutritio
 
 Any recipe formatted with the plugin will be immediately distributed and searchable on www.Edamam.com and on Edamam's mobile recipe search apps for Android and iOS. 
 
-See a quick demo on how you can format any recipe in 45 seconds - http://www.youtube.com/watch?v=ChgNi2mP3OA
+See a quick demo on how you can format any recipe in 45 seconds 
+[youtube http://www.youtube.com/watch?v=ChgNi2mP3OA]
 
 
 == Installation ==
@@ -36,7 +37,8 @@ See a quick demo on how you can format any recipe in 45 seconds - http://www.you
 3. To use the plugin, click the little E'' icon on the "Edit Post" pages, right next to the other "Upload/Insert" links at the top of the text editor box. Then enter the details about your recipe into the appropriate boxes, and click the  
 Save button.
 
-4. See a short video on how to use the plugin to format any recipe in 45 seconds - http://www.youtube.com/watch?v=ChgNi2mP3OA
+4. See a short video on how to use the plugin to format any recipe in 45 seconds
+[youtube http://www.youtube.com/watch?v=ChgNi2mP3OA]
 
 
 
@@ -49,9 +51,9 @@ Currently we support only nutritional information for blogs in English. Shoot us
 = How can I insert a hyperlink to another webpage or recipe =
 Including link within the recipe is very simple.
 Anywhere a link is desired (ingredient list or instructions) the following string is to be entered
-<a href="link">text</a>	
+'<a href="link">text</a>'	
 An example will be:
-Steam the rice in a rice steamer like the one <a href="http://www.amazon.com">here</a>.
+Steam the rice in a rice steamer like the one "<a href="http://www.amazon.com">here</a>".
 In the recipe the word 'here' will show underlined and when clicked will link to the page in question.
 
 = How do I format recipe with several ingredient lists =
