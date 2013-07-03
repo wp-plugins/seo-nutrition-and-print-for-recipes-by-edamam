@@ -61,7 +61,9 @@ Steam the rice in a rice steamer like the one <a href="http://www.amazon.com">he
 In the recipe the word 'here' will show underlined and when clicked will link to the page in question.
 
 = How do I format recipe with several ingredient lists =
-Put each ingredient on a separate line. There is no need to use bullets for your ingredients. To add sub-headings put them on a new line between [...]. Example will be - [for the dressing:]
+Put each ingredient on a separate line. There is no need to use bullets for your ingredients. The plugin formating is driven from its settings.
+ 
+To add sub-headings put them on a new line between [...]. Example will be - [for the dressing:]
 
 = What can I do if I have several recipes on the same page = 
 Yes you can you need to insert a separate plugin for each recipe with the correct title
@@ -87,14 +89,8 @@ This plugin is an extension to the Ziplist plugin with added:
 
 == Changelog ==
 
-= 2.4 =
+= 2.6=
 Critical update for crashes occuring within the WordPress database when HTML symbols are used in recipes.
-
-= 2.4 =
-Updated registration process for the plugin. 
-
-= 2.4 =
-Bug fix for the link to detailed nutritional information. 
 
 = 2.3 =
 Nutritional information is now contained on the blog improving speed and reliability
@@ -119,12 +115,6 @@ Added:
 
 = 2.6 =
 Critical update! Install immediately! Fixes rare but serious DB issues.
-
-= 2.4 =
-Changes applicable onl for new installs or unsuccessfull old installs. 
-
-= 2.4 =
-Upgrade immediately major update of formating and saving of the recipe nutrition.
 
 = 2.3 =
 
