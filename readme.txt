@@ -50,10 +50,11 @@ Currently we support only nutritional information for blogs in English. Shoot us
 
 = How can I insert a hyperlink to another webpage or recipe =
 Including link within the recipe is very simple.
-Anywhere a link is desired (ingredient list or instructions) the following string is to be entered [an example](http://example.com/ "text")	
+Anywhere a link is desired (ingredient list or instructions) the following string is to be entered 
+`<a href="http://example.com">here</a>`
 An example will be:
 Steam the rice in a rice steamer like the one <a href="http://www.amazon.com">here</a>.
-Where [an example]([an example](http://example.com/ "here")
+Where `<a href="http://www.amazon.com">here</a>`
 In the recipe the word 'here' will show underlined and when clicked will link to the page in question.
 
 = How do I format recipe with several ingredient lists =
