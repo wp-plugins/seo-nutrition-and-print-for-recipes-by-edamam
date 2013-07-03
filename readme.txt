@@ -46,6 +46,14 @@ Save button.
 = Does it the nutritional information work only on English language blogs =
 Currently we support only nutritional information for blogs in English. Shoot us an e-mail at widget@edamam.com and we will keep you posted when we expand to support additional languages.
 
+= How can I insert a hyperlink to another webpage or recipe =
+Including link within the recipe is very simple.
+Anywhere a link is desired (ingredient list or instructions) the following string is to be entered
+<a href="link">text</a>	
+An example will be:
+Steam the rice in a rice steamer like the one <a href="http://www.amazon.com">here</a>.
+In the recipe the word 'here' will show underlined and when clicked will link to the page in question.
+
 = How do I format recipe with several ingredient lists =
 Put each ingredient on a separate line. There is no need to use bullets for your ingredients. To add sub-headings put them on a new line between [...]. Example will be - [for the dressing:]
 
