@@ -1,0 +1,47 @@
+/*
+Plugin Name: Recipe SEO and Nutrition Plugin
+Plugin URI: http://www.edamam.com/widget
+Description: Include calorie and nutritional information in your recipes automatically and completely free.
+Version: 1.0
+Author: Edamam LLC
+Author URI: http://www.edamam.com/
+License: GPLv3 or later
+
+Copyright 2012 Edamam LLC.
+*/
+body { font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small; }table { font-size:inherit;font:100%; }pre,code,kbd,samp,tt{ font-family:monospace;*font-size:108%;line-height:100%; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{ margin:0;padding:0; }table{ border-collapse:collapse;border-spacing:0; }fieldset,img{ border:0; }address,caption,cite,code,dfn,em,strong,th,var{ font-style:normal;font-weight:normal; }li{ list-style:none; }caption,th{ text-align:left; }h1,h2,h3,h4,h5,h6{ font-size:100%;font-weight:normal; }q:before,q:after{ content:''; }abbr,acronym { border:0;font-variant:normal; }sup { vertical-align:text-top; }sub { vertical-align:text-bottom; }input,textarea,select{ font-family:inherit;font-size:inherit;font-weight:inherit; }input,textarea,select{ *font-size:100%; }legend{ color:#000; }
+
+.cls { zoom:1; } .cls:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+
+body#edamam-recipe-uploader { }
+
+.time input[type="number"]{float:left !important;margin:0 5px 0 0 !important;}
+#edamam-recipe-uploader a { outline: 0; }
+#edamam-recipe-uploader form { margin: 13px; }
+#edamam-recipe-form-items { width: 623px; border: 1px solid #DFDFDF; }
+#edamam-recipe-uploader h3.edamam-recipe-title { font-family: Georgia,"Times New Roman",Times,serif; font-weight: normal; color: #5A5A5A; font-size: 161.6%; margin: 13px 0; }
+#edamam-recipe-uploader p { margin: 16px; display: block; width: 590px; }
+#edamam-recipe-uploader label { font-weight: bold; font-size: 116%; line-height: 25px; }
+#edamam-recipe-uploader span.required { color: red; }
+#edamam-recipe-uploader input[type="text"], #edamam-recipe-uploader input[type="number"], #edamam-recipe-uploader textarea { width: 460px; border: 1px solid #DFDFDF; float: right; line-height: 15px; margin: 1px; padding: 3px; -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+#edamam-recipe-uploader textarea { height: 100px; }
+#edamam-recipe-uploader select { padding: 3px; }
+#edamam-recipe-uploader .rating { float: right; width: 470px;}
+#edamam-recipe-uploader input[type='text']:focus, #edamam-recipe-uploader input.text:focus, #edamam-recipe-uploader input[type='number']:focus, #edamam-recipe-uploader input.number:focus, #edamam-recipe-uploader input[type='password']:focus, #edamam-recipe-uploader textarea:focus { background-color: #eee; border-color: #ccc; color:#383f41; -webkit-box-shadow:0 0 5px rgba(160,160,112,0.6); }
+#edamam-recipe-uploader #edamam_recipe_ingredients small { font-weight: normal; display: block; line-height: 16px; font-size: 11px; }
+#edamam-recipe-uploader #edamam_recipe_ingredients textarea { width: 585px; }
+#edamam-recipe-uploader a { color: #21759B; margin-bottom: 32px; }
+#edamam-recipe-uploader #edamam-recipe-instructions small { font-weight: normal; display: block; line-height: 16px; font-size: 11px; }
+#edamam-recipe-uploader #edamam-recipe-instructions textarea { width: 585px; }
+#edamam-recipe-uploader .time { width: 470px; float: right; }
+#edamam-recipe-uploader .time span { width: 126px; display: block; float: left; }
+#edamam-recipe-uploader .time span.last { width: 90px; }
+#edamam-recipe-uploader .time input { width: 50px; border: 1px solid #dfdfdf; line-height: 15px; padding: 3px; -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+#edamam-recipe-uploader .time label { font-weight: normal; }
+#edamam-recipe-uploader input[type="submit"] { -moz-border-radius: 11px; -khtml-border-radius: 11px; -webkit-border-radius: 11px; border-radius: 11px -moz-box-sizing: content-box; border-style: solid; cursor: pointer; line-height: 13px; padding: 10px 25px; text-decoration: none; margin: 16px; text-shadow: 0 1px 0 #fff; background-color: #fff; border: 1px solid #bbb; font-size: 123.1%; font-weight: bold; }
+#edamam-recipe-uploader input[type="submit"]:hover { border-color: #666; }
+#edamam-recipe-uploader .input-error { border: 2px solid red !important; }
+#edamam-recipe-uploader #edamam_recipe_ingredients textarea.input-error { width: 585px !important; }
+#edamam-recipe-uploader p.error-message { color: red; font-weight: bold; }
+#edamam-recipe-uploader #recipe-title p.error-message { margin-left: 120px; }
