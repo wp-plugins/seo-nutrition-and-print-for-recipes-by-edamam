@@ -1,0 +1,173 @@
+#recipe-container{
+    padding: 20px;
+}
+#recipe-container #edamam-widget-end{
+    display:none;
+}
+#recipe-inner{
+    font: 14px/25px Georgia;
+}
+#recipe-inner h3{
+    font-family: Georgia;
+}
+#recipe-title h2{
+    margin:0;
+    font-family: Georgia;
+}
+#recipe-print{
+    float:right;
+}
+.recipe-clear {
+    clear: both;
+    display: block;
+    border-top:2px solid #000000;
+    margin: 10px 0 0;
+}
+.print-link{
+    background: url("http://www.edamam.com/widget/recipe/source/print.png") no-repeat scroll 0 0 transparent !important;
+    color: #F57584 !important;
+    font: 13px Georgia !important;
+    padding: 0 0 0 20px !important;
+    text-decoration: none !important;
+}
+.title-print{
+}
+#recipe-info{
+    float: left;
+}
+#recipe-info p {
+    font: bold 12px Georgia;
+    margin: 8px 0;
+    padding: 0 !important;
+}
+#recipe-info span {
+    font-weight: normal;
+}
+#edamam-nutritional-block{
+    float: right;
+    width: 40%;
+    margin: 0 0 10px;
+}
+#edamam-not-nutritional{
+    color: #656565;
+    float: right;
+    font: 12px Arial;
+    margin: 15px 0;
+    text-align: center;
+    width: 30%;
+}
+#edamam-not-nutritional a{
+    margin:5px 0 0;
+    display: block;
+}
+#edamam-nutritional p{
+    display: block;
+    font: bold 12px Georgia;
+    margin: 8px 0;
+    padding: 0 !important;
+}
+#edamam-line .name{
+    font: bold 12px Georgia;
+    padding: 4px 0;
+    width: 50%;
+}
+#edamam-line .gr{
+    float: right;
+    font: 12px Georgia;
+}
+#edamam-line .big{
+    font: 16px Georgia;
+    margin: -3px 0 0;
+}
+.edamam-img {
+    background: none repeat scroll 0 0 transparent !important;
+    border: 0 none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#edamam-line .edamam-full {
+    color: #89D422 !important;
+    display: block !important;
+    font: bold 11px Arial,Verdana,Geneva,sans-serif !important;
+    margin-bottom: 3px !important;
+    margin-top: 8px !important;
+    text-decoration: none !important;
+}
+#image-desc{
+    padding: 10px;
+    text-align: center;
+    margin: 0 0 10px;
+    clear: both;
+}
+#image-desc .hide-card{
+    display:none;
+}
+.recipe-image{
+    width: 100%;
+    margin:0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: none !important;
+    border-radius:0 !important; 
+}
+#recipe-summary{
+    font: italic 15px Georgia;
+    text-align: left;
+}
+
+#recipe-rating .rating {
+    background: url("http://www.edamam.com/widget/recipe/source/star-rating.gif") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 14px;
+    text-indent: -9999px;
+    width: 80px;
+}
+#recipe-rating .rating-5 {
+    background-position: 0 0;
+}
+#recipe-rating .rating-45 {
+    background-position: 0 -14px;
+}
+#recipe-rating .rating-4 {
+    background-position: 0 -28px;
+}
+#recipe-rating .rating-35 {
+    background-position: 0 -42px;
+}
+#recipe-rating .rating-3 {
+    background-position: 0 -56px;
+}
+#recipe-rating .rating-25 {
+    background-position: 0 -70px;
+}
+#recipe-rating .rating-2 {
+    background-position: 0 -84px;
+}
+#recipe-rating .rating-15 {
+    background-position: 0 -98px;
+}
+#recipe-rating .rating-1 {
+    background-position: 0 -112px;
+}
+#recipe-rating .rating-05 {
+    background-position: 0 -126px;
+}
+#recipe-rating .rating-0 {
+    background-position: 0 -140px;
+}
+#recipe-print-container{
+    border: 1px dashed black;
+    margin: 0 auto;
+    padding: 10px;
+    width: 7.5in;
+}
+#recipe-print-container #recipe-rating{
+    display:none;
+}
+#recipe-print-container #image-desc {
+    background: none;
+    clear: both;
+    margin: 0;
+    padding:0;
+    text-align: left;
+}
