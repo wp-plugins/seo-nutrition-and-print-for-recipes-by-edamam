@@ -91,6 +91,14 @@ This plugin is an extension to the Ziplist plugin with added:
 
 == Changelog ==
 
+= 3.0 =
+Moved the icon for the Edamam plugin in the toolbar of the Wordpress editor. 
+Changed the process for editing a recipe in the plugin. Requires a click on the toobar icon.
+
+= 2.9 =
+Fixed issue causing the WP editor to break in WP 3.9 
+This is a temporary fix which allows the blog to display and and create new recipes but not to edit them
+Version 3.0 of the plugin will fix the problem completely 
 
 = 2.8 =
 Fixed "Div by zero" when connection with nutritional serivce failes. 
