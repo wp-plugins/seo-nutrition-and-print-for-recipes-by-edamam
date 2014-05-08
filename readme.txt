@@ -34,10 +34,12 @@ See a quick demo on how you can format any recipe in 45 seconds
 
 2. Click the activate link during installation. Or In your WordPress admin, click on "Plugins" and Activate the Edmam plugin.the files there or simply extract the zip file in the Plugins directory. 
 
-3. To use the plugin, click the little E'' icon on the "Edit Post" pages, right next to the other "Upload/Insert" links at the top of the text editor box. Then enter the details about your recipe into the appropriate boxes, and click the  
+3. To use the plugin, click the little 'E' icon in the toolbar on the "Edit Post" pages. Then enter the details about your recipe into the appropriate boxes, and click the  
 Save button.
 
-4. See a short video on how to use the plugin to format any recipe in 45 seconds
+4. To Edit any recipe formated with the plugin simply go the 'Edit Post' page and click on the 'E' icon in the toolbar.
+
+5. See a short video on how to use the plugin to format any recipe in 45 seconds
 [youtube http://www.youtube.com/watch?v=ChgNi2mP3OA]
 
 
