@@ -7,8 +7,8 @@ Author URI: http://www.edamam.com/
 Author: Edamam LLC
 Requires at least: 3.2
 Tested up to: 3.9
-Stable tag: 2.9
-Version: 2.9
+Stable tag: 3.0
+Version: 3.0
 License: GPLv2 or later
 
 The recipe plugin does all formating for you and makes recipes Google friendly with Schema.org. It also adds recipe's nutrition!
@@ -89,10 +89,6 @@ This plugin is an extension to the Ziplist plugin with added:
 
 == Changelog ==
 
-= 2.9 =
-Fixed issue causing the WP editor to break in WP 3.9 
-This is a temporary fix which allows the blog to display and and create new recipes but not to edit them
-Version 3.0 of the plugin will fix the problem completely 
 
 = 2.8 =
 Fixed "Div by zero" when connection with nutritional serivce failes. 
@@ -123,6 +119,16 @@ Added:
 - Option to format multiple ingredient lists in a single recipe
 
 == Upgrade Notice ==
+
+
+= 3.0 =
+Moved the icon for the Edamam plugin in the toolbar of the Wordpress editor. 
+Changed the process for editing a recipe in the plugin. Requires a click on the toobar icon.
+
+= 2.9 =
+Fixed issue causing the WP editor to break in WP 3.9 
+This is a temporary fix which allows the blog to display and and create new recipes but not to edit them
+Version 3.0 of the plugin will fix the problem completely 
 
 = 2.8 =
 Fixed "Div by zero" when connection with nutritional serivce failes. 
