@@ -7,8 +7,8 @@ Author URI: http://www.edamam.com/
 Author: Edamam LLC
 Requires at least: 3.2
 Tested up to: 3.9
-Stable tag: 3.0
-Version: 3.0
+Stable tag: 3.1
+Version: 3.1
 License: GPLv2 or later
 
 The recipe plugin does all formating for you and makes recipes Google friendly with Schema.org. It also adds recipe's nutrition!
@@ -90,6 +90,10 @@ This plugin is an extension to the Ziplist plugin with added:
 
 
 == Changelog ==
+
+= 3.1 =
+Bug fixes. The Edamam logo now links to Edamam's Nutrition wizard.
+
 
 = 3.0 =
 Moved the icon for the Edamam plugin in the toolbar of the Wordpress editor. 
