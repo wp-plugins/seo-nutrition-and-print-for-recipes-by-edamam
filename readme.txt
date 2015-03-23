@@ -6,9 +6,9 @@ Tags: SEO, recipes, recipe seo, calorie, calories, hRecipe, Schema.org, nutritio
 Author URI: http://www.edamam.com/
 Author: Edamam LLC
 Requires at least: 3.2
-Tested up to: 3.9
-Stable tag: 3.1
-Version: 3.1
+Tested up to: 4.1.1.
+Stable tag: 3.2
+Version: 3.2
 License: GPLv2 or later
 
 The recipe plugin does all formating for you and makes recipes Google friendly with Schema.org. It also adds recipe's nutrition!
