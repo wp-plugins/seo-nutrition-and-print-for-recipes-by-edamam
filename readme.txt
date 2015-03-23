@@ -91,6 +91,9 @@ This plugin is an extension to the Ziplist plugin with added:
 
 == Changelog ==
 
+= 3.2 =
+Bug fixes. Retested for compatibility with Wordpress 4.1.1.
+
 = 3.1 =
 Bug fixes. The Edamam logo now links to Edamam's Nutrition wizard.
 
